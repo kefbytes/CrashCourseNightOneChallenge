@@ -30,37 +30,55 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-Nc-aUM">
-                                <rect key="frame" x="216" y="67" width="168" height="30"/>
+                                <rect key="frame" x="175" y="67" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4Br-Bk-I2O"/>
                                     <constraint firstAttribute="width" constant="168" id="ffg-jb-JxX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="wFV-NS-na8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ffg-jb-JxX"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="KoL-fr-pGN" id="E0H-cS-UkW"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-Wp-pbj">
-                                <rect key="frame" x="216" y="111" width="168" height="30"/>
+                                <rect key="frame" x="175" y="111" width="250" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Ddb-cG-cMV"/>
                                     <constraint firstAttribute="height" constant="30" id="nB2-O6-AVH"/>
                                     <constraint firstAttribute="width" constant="168" id="rMF-Cn-iLY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rMF-Cn-iLY"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="KoL-fr-pGN" id="ez2-gC-62R"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City to Track Weather" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TL-RM-hpC">
-                                <rect key="frame" x="20" y="550" width="186" height="30"/>
+                                <rect key="frame" x="20" y="550" width="200" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="5fG-LD-Ufa"/>
                                     <constraint firstAttribute="height" constant="30" id="B2P-dj-fyL"/>
                                     <constraint firstAttribute="width" constant="186" id="z1F-nQ-QPz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="z1F-nQ-QPz"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBD-2d-4un">
                                 <rect key="frame" x="496" y="550" width="84" height="30"/>

@@ -21,6 +21,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Handle Keyboard Dismissal
+        let outsideTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(outsideTap)
+        
+        // UISetup
+        setupTextFields()
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -28,6 +35,19 @@ class LoginViewController: UIViewController {
 
     }
     
+    // MARK: - UISetup
+    func setupTextFields() {
+        usernameTextField.layer.borderWidth = 1.0
+        usernameTextField.layer.cornerRadius = 6.0
+        usernameTextField.layer.borderColor = UIColor .lightGrayColor().CGColor
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 6.0
+        passwordTextField.layer.borderColor = UIColor .lightGrayColor().CGColor
+        addCityTextField.layer.borderWidth = 1.0
+        addCityTextField.layer.cornerRadius = 6.0
+        addCityTextField.layer.borderColor = UIColor .lightGrayColor().CGColor
+    }
+
     // MARK: - Actions
     @IBAction func loginAction(sender: AnyObject) {
         
@@ -44,14 +64,12 @@ class LoginViewController: UIViewController {
     // added for convenience don't worry about doing anything here
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         let nextTag=textField.tag+1;
-        let nextResponder=textField.superview?.viewWithTag(nextTag) as UIResponder!
-        if (nextResponder != nil){
-            nextResponder?.becomeFirstResponder()
+        if let nextResponder=textField.superview?.viewWithTag(nextTag) as UIResponder! {
+            nextResponder.becomeFirstResponder()
         }
         else
         {
             textField.resignFirstResponder()
-            loginAction(loginButton)
         }
         return false
     }
